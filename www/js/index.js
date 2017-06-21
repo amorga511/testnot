@@ -41,8 +41,8 @@ var app = {
             text: 'Hello world',
             at: _sec_from_now,
             led: "FF0000",
-            icon: 'file://icon.png',
-            smallIcon: 'file://icon.png'
+            icon: 'res://icon',
+            smallIcon: 'res://icon'
         });
 
     },
