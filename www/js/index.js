@@ -33,8 +33,17 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        var vnow = new Date().getTime();
+        var _sec_from_now = new Date(vnow + 1*1000);
+
         app.receivedEvent('deviceready');
-        cordova.plugins.notification.local.schedule({ message:"Hello World" });
+        cordova.plugins.notification.local.schedule({
+            text: 'Hello world',
+            at: _sec_from_now,
+            led: "FF0000",
+            icon: 'img/appicon.png'
+        });
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
