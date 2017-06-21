@@ -42,7 +42,7 @@ var app = {
             at: _sec_from_now,
             led: "FF0000",
             icon: 'res://icon',
-            smallIcon: 'file://www/img/logo.png'
+            smallIcon: 'file://logo.png'
         });
 
     },
