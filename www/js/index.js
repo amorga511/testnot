@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        cordova.plugins.notification.local.schedule({ message:"Hello World" });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -45,5 +46,7 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+
+
     }
 };
